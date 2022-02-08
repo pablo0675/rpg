@@ -7,8 +7,15 @@
 
 CC 			= gcc
 
-SRC 		=	main.c
-SRC			+=	src/my_rpg.c
+SRC 					=		main.c
+SRC						+=		src/my_rpg.c
+SRC                     +=      csfml_lib/close_programm.c
+SRC                     +=      csfml_lib/my_create_text.c
+SRC                     +=      csfml_lib/my_create_window.c
+SRC                     +=      csfml_lib/sprite_create.c
+SRC                     +=      csfml_lib/sprite_rect.c
+
+
 
 OBJ			=	$(SRC:.c=.o)
 
@@ -35,6 +42,7 @@ Makelib:
 
 clean:
 	(cd src && rm *.o)
+	(cd csfml_lib && rm *.o)
 	rm *.o
 	@echo -e "\n    All .o deleted        "
 fclean:
