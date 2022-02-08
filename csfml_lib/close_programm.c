@@ -6,7 +6,7 @@
 */
 
 #include "my_csfml.h"
-#include "../include/printf.h"
+#include "../lib/printf.h"
 
 
 static void close_window(sfRenderWindow *window)
