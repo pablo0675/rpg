@@ -30,5 +30,6 @@ typedef struct game_s
 void free_struct(game_t *g);
 int my_rpg(int ac, char **av);
 game_t *init_struct(game_t *g);
+void print_logo();
 
 #endif //MY_RPG_MY_RPG_H

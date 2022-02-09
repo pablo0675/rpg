@@ -10,6 +10,7 @@ CC 			= gcc
 SRC 					=		main.c
 SRC						+=		src/my_rpg.c
 SRC						+=		src/init_and_free_all.c
+SRC						+=		src/rpg_logo.c
 SRC                     +=      csfml_lib/close_programm.c
 SRC                     +=      csfml_lib/my_create_text.c
 SRC                     +=      csfml_lib/my_create_window.c
