@@ -5,9 +5,7 @@
 ** close_winfow
 */
 
-#include "my_csfml.h"
-#include "../lib/printf.h"
-
+#include "my_rpg.h"
 
 static void close_window(sfRenderWindow *window)
 {
