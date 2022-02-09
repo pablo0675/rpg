@@ -9,21 +9,20 @@ CC 			= gcc
 
 SRC 					=		main.c
 SRC						+=		src/my_rpg.c
+SRC						+=		src/init_and_free_all.c
 SRC                     +=      csfml_lib/close_programm.c
 SRC                     +=      csfml_lib/my_create_text.c
 SRC                     +=      csfml_lib/my_create_window.c
 SRC                     +=      csfml_lib/sprite_create.c
 SRC                     +=      csfml_lib/sprite_rect.c
 
-
-
 OBJ			=	$(SRC:.c=.o)
 
 NAME 		= my_rpg
 
-CFLAGS += -Wall -Wextra
+CFLAGS += -Wall -Wextra -I ./include/
 
-CPPFLAGS += -I./include
+CPPFLAGS += -I ./include/
 
 LDFLAGS = -L ./lib -lmy -g
 

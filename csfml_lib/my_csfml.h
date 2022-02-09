@@ -58,17 +58,6 @@ typedef struct text_s
 	sfRenderStates *state;
 } text_t;
 
-typedef struct game_s
-{
-    background_t *layer1;
-    my_clock_t *Clock;
-    sprite_t *player;
-    window_t *window;
-	text_t *text;
-	background_t *layer2;
-	background_t *layer3;
-} game_t;
-
 sfRenderWindow *my_create_window(int height, int width, char *name);
 sfSprite *my_init_sprite(sprite_t *sprite, char *name);
 void put_text(const char *word, int x,
