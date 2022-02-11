@@ -27,6 +27,8 @@ typedef struct game_s
     flag_t *flags;
 } game_t;
 
+int start_menu(game_t *g);
+int game_menu(game_t *g);
 void free_struct(game_t *g);
 int my_rpg(int ac, char **av);
 game_t *init_struct(game_t *g);
