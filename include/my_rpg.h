@@ -9,29 +9,56 @@
     #define MY_RPG_MY_RPG_H
     #include "../lib/printf.h"
     #include "../csfml_lib/my_csfml.h"
+    #include "inventory.h"
 
-typedef struct flag_s
-{
+typedef struct flag_s {
     char **save;
     int s;
     int help;
 } flag_t;
 
-typedef struct game_s
-{
+typedef struct sound_s {
+    sfSound *hit;
+    sfSound *miss;
+    sfSound *lost;
+    sfSound *won;
+} sound_t;
+
+typedef struct music_s {
+    sfMusic *menu;
+    sfMusic *fights;
+    sfMusic *game;
+    sound_t *sound;
+} music_t;
+
+typedef struct game_s {
     background_t *map;
     my_clock_t *Clock;
     sprite_t *player;
     window_t *window;
     text_t *text;
     flag_t *flags;
+    music_t *music;
+    object_t *obj;
 } game_t;
 
+/*###################   menu gestion      ##################*/
 int start_menu(game_t *g);
 int game_menu(game_t *g);
+
+/*###################   free and destroy ##################*/
 void free_struct(game_t *g);
-int my_rpg(int ac, char **av);
+void free_struct(game_t *g);
+void destroy_all(game_t *g);
+void destroy_music(game_t *g);
+
+/*###################       init        ###################*/
 game_t *init_struct(game_t *g);
+
+/*###################      main         ###################*/
 void print_logo();
+int my_rpg(int ac, char **av);
+
+/*###################     Inventory     ###################*/
 
 #endif //MY_RPG_MY_RPG_H

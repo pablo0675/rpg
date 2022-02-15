@@ -21,6 +21,7 @@ game_t *parse_flag(char *str, game_t *g, char *str2)
         my_printf("%sUSAGE%s:       ./my_rpg\n", RED, RESET);
         my_printf("             -s save file\n");
         my_printf("             -h for help\n");
+        //my_printf("             -m for map\n");
         g->flags->help = 1;
     }
     if (my_strcmp(str, "-s", 2) == 0 && g->flags->s != 1) {
@@ -30,13 +31,35 @@ game_t *parse_flag(char *str, game_t *g, char *str2)
     return g;
 }
 
+void my_loop(game_t *g)
+{
+    sfEvent event;
+
+    g->window->window = my_create_window(1080, 1920, "castlevachat");
+    sfRenderWindow_setFramerateLimit(g->window->window, 45);
+    sfRenderWindow_clear(g->window->window, sfBlack);
+    while (sfRenderWindow_isOpen(g->window->window) ||
+        sfRenderWindow_pollEvent(g->window->window, &event)) {
+        if (sfKeyboard_isKeyPressed(sfKeyEscape)|| event.type == sfEvtClosed)
+            free_struct(g);
+        my_printf("%sloop\n%s", RED, RESET);
+        my_printf("%smenu\n%s", RED, RESET);
+        my_printf("%sgame\n%s", RED, RESET);
+        sfRenderWindow_display(g->window->window);
+    }
+}
+
 int my_rpg(int ac, char **av)
 {
     game_t *g = malloc(sizeof(game_t));
 
-    init_struct(g);
+    if (g == NULL)
+        return 0;
+    if (init_struct(g) == NULL)
+        return 0;
     for (int i = 0; av[i] != NULL; i++)
         parse_flag(av[i], g, av[i + 1]);
+    my_loop(g);
     free_struct(g);
     return 0;
 }

@@ -12,8 +12,7 @@
     #include <SFML/Audio.h>
     #include <SFML/System.h>
 
-typedef struct window_s
-{
+typedef struct window_s {
     sfRenderWindow *window;
     int width;
     int height;
@@ -23,14 +22,12 @@ typedef struct window_s
     char **filepath_sprite;
 } window_t;
 
-typedef struct my_clock_s
-{
+typedef struct my_clock_s {
     sfClock *Clock;
     sfTime Time;
 } my_clock_t;
 
-typedef struct background_s
-{
+typedef struct background_s {
     sfVector2f pos;
     sfVector2f scale;
     char *filepath;
@@ -38,8 +35,7 @@ typedef struct background_s
     sfTexture *texture;
 } background_t;
 
-typedef struct sprite_s
-{
+typedef struct sprite_s {
     sfVector2f pos;
     sfVector2f scale;
     char *filepath;
@@ -48,8 +44,7 @@ typedef struct sprite_s
 	sfIntRect rect;
 } sprite_t;
 
-typedef struct text_s
-{
+typedef struct text_s {
     sfVector2f pos;
     sfVector2f scale;
     char *text;
