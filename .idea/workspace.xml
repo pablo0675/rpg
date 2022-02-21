@@ -10,7 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a50b8c57-a576-4f15-99ad-1d2a8dd946df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/my_csfml.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csfml_lib/close_programm.c" beforeDir="false" afterPath="$PROJECT_DIR$/csfml_lib/close_programm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csfml_lib/my_create_text.c" beforeDir="false" afterPath="$PROJECT_DIR$/csfml_lib/my_create_text.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csfml_lib/my_create_window.c" beforeDir="false" afterPath="$PROJECT_DIR$/csfml_lib/my_create_window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csfml_lib/my_csfml.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csfml_lib/sprite_rect.c" beforeDir="false" afterPath="$PROJECT_DIR$/csfml_lib/sprite_rect.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/inventory.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/inventory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/my_rpg.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/my_rpg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/free_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/free_array.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/my_strcat.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my_strcat.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/my_strdup.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my_strdup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/print_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/print_array.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_rpg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_rpg.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +55,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2021-2022/graphical/runner" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="AtomSelectConfig" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,6 +86,7 @@
       <workItem from="1644411402118" duration="3964000" />
       <workItem from="1644581154298" duration="2000000" />
       <workItem from="1644775249655" duration="22000" />
+      <workItem from="1645446937058" duration="1513000" />
     </task>
     <servers />
   </component>
@@ -88,5 +103,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

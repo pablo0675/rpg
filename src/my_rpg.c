@@ -35,7 +35,7 @@ void my_loop(game_t *g)
 {
     sfEvent event;
 
-    g->window->window = my_create_window(1080, 1920, "castlevachat");
+    my_create_window(1080, 1920, "castlevachat", g);
     sfRenderWindow_setFramerateLimit(g->window->window, 45);
     sfRenderWindow_clear(g->window->window, sfBlack);
     while (sfRenderWindow_isOpen(g->window->window) ||

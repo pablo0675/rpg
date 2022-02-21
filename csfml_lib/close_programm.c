@@ -5,25 +5,32 @@
 ** close_winfow
 */
 
-#include "my_rpg.h"
+#include "../include/my_rpg.h"
 
-static void close_window(sfRenderWindow *window)
+static void close_window(game_t *game)
 {
-	my_printf("%s\n", "closing window");
-	sfRenderWindow_close(window);
+    my_printf("%s\n", "closing window");
+    sfRenderWindow_close(game->window->window);
 }
 
-static void close_music(sfMusic *music)
+static void close_sound(game_t *game)
 {
-	my_printf("%s\n", "closing music");
-	sfMusic_destroy(music);
+    return;
 }
 
-void close_cond(sfRenderWindow *window, sfMusic *music, sfMusic *music2)
+static void close_music(game_t *game)
 {
-	my_printf("%s%s\n", underlined_yellow, "closing programm...");
-	close_music(music);
-	close_music(music2);
-	close_window(window);
-	my_printf("%s", RESET);
+    my_printf("%s\n", "closing music");
+    sfMusic_destroy(game->music->game);
+    sfMusic_destroy(game->music->fights);
+    sfMusic_destroy(game->music->menu);
+    close_sound(game);
+}
+
+void close_cond(game_t *game)
+{
+    my_printf("%s%s\n", underlined_yellow, "closing programm...");
+    close_music(game);
+    destroy_all(game);
+    my_printf("%s", RESET);
 }

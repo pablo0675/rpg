@@ -5,7 +5,7 @@
 ** create sprites
 */
 
-#include "my_csfml.h"
+#include "../include/my_csfml.h"
 
 sprite_t *my_init_rect(sprite_t *sprites, int rectangle[4])
 {

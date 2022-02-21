@@ -21,9 +21,9 @@ char *my_strdup(char const *str)
 
 char *my_strndup(char const *str, int n)
 {
-	char *dup = malloc(sizeof(char) * (n + 1));
+    char *dup = malloc(sizeof(char) * (n + 1));
 
-	dup = my_strcpy(dup, str, n);
-	dup[n] = '\0';
-	return dup;
+    dup = my_strcpy(dup, str, n);
+    dup[n] = '\0';
+    return dup;
 }

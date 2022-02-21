@@ -7,15 +7,8 @@
 
 #ifndef RPG_INVENTORY_H
     #define RPG_INVENTORY_H
-    #include "../csfml_lib/my_csfml.h"
+    #include "my_csfml.h"
     #include "../lib/printf.h"
+    #include "game_struct.h"
 
-typedef struct object_s {
-    int nb;
-    int type;
-    int name;
-    sprite_t *sword;
-    sprite_t *food;
-    sprite_t *water;
-} object_t;
 #endif //RPG_INVENTORY_H

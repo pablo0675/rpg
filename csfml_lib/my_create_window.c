@@ -5,7 +5,7 @@
 ** create_window
 */
 
-#include "my_csfml.h"
+#include "../include/my_csfml.h"
 #include <stdlib.h>
 
 sfRenderWindow *my_create_window2(char *name, int width, int height)
@@ -22,19 +22,14 @@ sfRenderWindow *my_create_window2(char *name, int width, int height)
     return (window);
 }
 
-sfRenderWindow *my_create_window(int height, int width, char *name)
+game_t *my_create_window(int height, int width, char *name, game_t *game)
 {
-    window_t *window;
-
-    window = malloc(sizeof(window_t));
-    if (window == NULL) {
-	    return (NULL);
+    game->window = malloc(sizeof(window_t));
+    if (game->window == NULL) {
+        return (NULL);
     }
-    window->height = height;
-    window->width = width;
-    window->window = my_create_window2(name, window->width, window->height);
-    return (window->window);
+    game->window->height = height;
+    game->window->width = width;
+    game->window->window = my_create_window2(name, game->window->width, game->window->height);
+    return (game);
 }
-
-
-
